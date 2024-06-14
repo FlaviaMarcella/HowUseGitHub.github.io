@@ -1,0 +1,227 @@
+/* Definindo variáveis para facilitar a manutenção do estilo */
+:root {
+    --primary-color: #153951;
+    --secondary-color: #cf7017;
+    --background-color: #d0d0d0;
+    --font-color: #252424;
+    --heading-font: 'Arial Black', sans-serif;
+    --body-font: 'Arial', sans-serif;
+    --link-color: #3498db;
+    --link-hover-color: #2980b9;
+    --padding: 10px;
+    --margin: 10px;
+    --border-radius: 5px;
+}
+
+/* Estilos globais */
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--font-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: var(--padding);
+}
+
+/* Estilos para cabeçalhos */
+h1, h2, h3, h4, h5 {
+    font-family: var(--heading-font);
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3, h4, h5 {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: var(--font-color)
+}
+
+/* Estilos para o menu de navegação */
+nav {
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 var(--margin);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+.intro-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.intro-container p {
+    flex: 1;
+}
+
+.intro-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.command-list-container {
+    display: flex;
+    gap: 20px;
+}
+
+.command-list-container ul {
+    flex: 1;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.command-list-container ul li {
+    margin-bottom: 5px;
+}
+
+/* Estilos para a lista de comandos */
+.command-list {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+}
+
+.command-list .menu {
+    margin-bottom: 10px;
+}
+
+.command-list .menu-btn {
+    background-color: var(--background-color);
+    color: black;
+    padding: 8px;
+    border: 1px solid #000000; /* Borda ao redor do título do comando */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 95%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.command-list .menu-btn:hover .arrow {
+    color: #555; /* Cor da seta ao passar o mouse */
+}
+
+.command-list .arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.command-list .menu-content {
+    display: none; /* Inicialmente oculto */
+    background-color: #d7d7d7;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-bottom: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    border-radius: 5px;
+    width: 93%;
+}
+
+.command-list .menu-content p {
+    margin: 0; /* Remover margem padrão */
+}
+
+.command-list .menu.active .arrow {
+    transform: rotate(180deg); /* Girar a seta quando o menu estiver aberto */
+}
+
+/* Exibir o conteúdo do menu ao clicar */
+.command-list .menu.active .menu-content {
+    display: block;
+}
+
+/* Estilos para parágrafos */
+p {
+    margin-bottom: var(--margin);
+}
+
+/* Estilos para listas */
+ul, ol {
+    padding-left: 40px;
+    margin-bottom: var(--margin);
+}
+
+/* Estilos para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--margin);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: var(--padding);
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilos para imagens */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+}
+
+/* Estilos para links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Estilo para o botão de voltar ao topo */
+a[href="#topo"] {
+    display: block;
+    text-align: center;
+    margin-top: var(--margin);
+    padding: var(--padding);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+a[href="#topo"]:hover {
+    background-color: var(--secondary-color);
+}
+
+audio {
+    display: block;
+    margin: 0 auto; /* Centraliza o elemento <audio> horizontalmente */
+    margin-top: 20px; /* Espaço acima do elemento <audio> */
+}

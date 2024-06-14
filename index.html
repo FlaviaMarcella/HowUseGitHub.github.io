@@ -5,315 +5,568 @@
     <title> Como usar o Git e GitHub </title>
     <meta charset="UTF-8">
     <meta name="description" content="Meu primeiro site HMTL">
+
+    <script>
+        function toggleMenu(menu) {
+            menu.parentNode.classList.toggle('active');
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <h1 id="topo"> Introdução a Git e GitHub - Nível básico </h1>
-    <p><a href="audio.html"> Audio Explicativo </a> <br>  <a href="video.html"> Vídeo Explicativo</a></p>
-    <p>É de extrema importância que um desenvolvedor esteja atento a todas os mecanimos que são utilizados dentro de sua
-        área de atuação. Ter conhecimento sobre alguns sistemas e plataformas populares é de extrema importância para
-        que
-        o programador esteja atualizado neste ramo, o que proporciona maior aproveitamento do seu trabalho e ainda
-        permite
-        que consiga se adaptar bem a qualquer empresa que exija tais conhecimentos. Pensando nisso, criamos um tutorial
-        básico sobre o VCS Git, e a popular plataforma GitHub, a fim de ajudar desenvolvedores iniciantes a se
-        introduzir nesse meio.
-    </p>
 
-    <img src="imagem/git.jpg" alt="Imagem do Git e GitHub">
+    <nav>
+        <li>
+            <a href="audio.html"> Audio Explicativo </a>
+        </li>
+        <li>
+            <a href="video.html"> Vídeo Explicativo</a>
+        </li>
+    </nav>
 
+    <div class="intro-container">
+        <p>É de extrema importância que um desenvolvedor esteja atento a todas os mecanimos que são utilizados dentro de
+            sua
+            área de atuação. Ter conhecimento sobre alguns sistemas e plataformas populares é de extrema importância
+            para
+            que
+            o programador esteja atualizado neste ramo, o que proporciona maior aproveitamento do seu trabalho e ainda
+            permite
+            que consiga se adaptar bem a qualquer empresa que exija tais conhecimentos. Pensando nisso, criamos um
+            tutorial
+            básico sobre o VCS Git, e a popular plataforma GitHub, a fim de ajudar desenvolvedores iniciantes a se
+            introduzir nesse meio.
+        </p>
+
+        <img src="imagem/git.png" alt="Imagem do Git e GitHub">
+    </div>
     <h2> Git</h2>
     <p> O Git é um sistema de controle de versão distribuído que permite rastrear as alterações feitas em arquivos ao
         longo do tempo. Isso facilita a colaboração em projetos e ajuda a manter um histórico preciso das mudanças.
         O Git desempenha um papel fundamental na colaboração e no desenvolvimento de software, permitindo que várias
         pessoas trabalhem juntas em projetos enquanto mantêm um registro claro das modificações feitas.
         Neste site, ensinaremos algumas funcionalidades básicas desta plataforma extremamente importante
-        e popular entre os programadores. </p> 
-    
-        <nav >
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="audio.html">Audio</a></li>
-              <li><a href="video.html">Vídeo</a></li>
-            </ul>
-          </nav>
-        <!-- <div><a href="audio.html">Audio</a> <br> <a href="video.html">Video</a></div> -->
+        e popular entre os programadores. </p>
 
     <p> Lista com todos os comandos que abordaremos neste tutorial.</p>
-    
-    <ul>
-        <li>init</li>
-        <li>clone</li>
-        <li>branch</li.>
-        <li>checkout</li>
-        <li>status</li>
-        <li>diff</li>
-        <li>add</li>
-        <li>commit</li>
-        <li>push</li>
-        <li>pull</li>
-        <li>revert</li>
-        <li>merge</li>
-        <li>stash</li>
-        <li>rm</li>
-        <li>config</li>
-        <li>reset</li>
-        <li>remote</li>
-        <li>fetch</li>
-        <li>show</li>
-        <li>help</li>
-        <li>rebase</li>
-        <li>blame</li>
-        <li>tag</li>
-    </ul>
 
+    <div class="command-list-container">
+        <ul>
+            <li>init</li>
+            <li>clone</li>
+            <li>branch</li>
+            <li>checkout</li>
+            <li>status</li>
+            <li>diff</li>
+        </ul>
+        <ul>
+            <li>add</li>
+            <li>commit</li>
+            <li>push</li>
+            <li>pull</li>
+            <li>revert</li>
+            <li>merge</li>
+        </ul>
+        <ul>
+            <li>stash</li>
+            <li>rm</li>
+            <li>config</li>
+            <li>reset</li>
+            <li>remote</li>
+            <li>fetch</li>
+        </ul>
+        <ul>
+            <li>show</li>
+            <li>help</li>
+            <li>rebase</li>
+            <li>blame</li>
+            <li>tag</li>
+        </ul>
+    </div>
 
-    <h3> Definições </h3>
-    <h4>Init</h4>
-    <p><mark>init</mark> é utilizado para iniciar um repositório Git dentro so sistema.
-        Após a incialização, a ferramenta passa a monitorar o estado dos arquivvos no projeto.
-    </p>
-    <h4>Clone</h4>
-    <p>O comando <mark>clone</mark> cria uma cópia de um repositório remoto em um diretório
-        da máquina.A partir de um repositório clonado, é possível acompanhar o
-        de um projeto e suas modificações, além de contribuir com o projeto, a
-        partir do envio das suas modificações ao repositório central.
-    </p>
-    <h4>Branch</h4>
-    <p> <mark>branch</mark> serve para criar novos ramos de desenvolvimento, bem como visualizar
-        quais são os ramos existentes.Para criar um novo ramo, basta utilizar o comando
-        git branch seguido do nome do novo ramo, e para visualizar quais os ramos existentes
-        a utilização do comando é bem similar: basta não informar um nome para a nova branch,
-        e serão listadas todas as já criadas
-    </p>
-    <h4>Checkout</h4>
-    <p>O comando <mark>checkout</mark> é utilizado para navegar entre as versões do projeto, bem como entre as
-        diferentes ramificações
-        criadas. Para navegar entre as versões, basta usar o comando: <i>git checkout = Hashcode do commit</i>.
-        E todo o estado do projeto se modificará ao estado no qual o commit foi feito
-    </p>
-    <h4>Status</h4>
-    <p>É utilizado para verificar o <mark>status</mark> de um repositório git, bem como o estado do repositório central.
-        O comando
-        mostra informações como se o projeto local está sincronizado com o central, quais arquivos estão sendo
-        monitorados pelo Git e em qual branch você está no projeto.
-    </p>
-    <h4>Diff</h4>
-    <p><mark>Diff</mark> é utilizado para visualizar modificações feitas entre commits, sejam eles entre um commit
-    arbitrário e o estado
-    atual do projeto, dois commits arbitrários, ou até mesmo todas alterações entre dois commits distintos.
-    Para visualizar as alterações entre um commit distinto e o atual, basta usar o comando: <i> git diff = Hashcode do
-    commit anterior</i>
-    </p>
+    <div class="command-list">
 
-    <h4>Add</h4>
-    <p>É comando <mark>add</mark> utilizado para adicionar arquivos ao pacote de alterações a serem feitas. É possível
-        adicionar um único
-        arquivo, múltiplos arquivos de uma vez, ou até mesmo um diretório, a partir de seu caminho. Uma vez que um
-        arquivo é adicionado ao pacote de alterações com o comando add, ele está pronto para entrar no próximo commit.
-    </p>
+        <h2> Definições </h2>
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">init</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p><mark>init</mark> é utilizado para iniciar um repositório Git dentro do sistema. Após a
+                    inicialização, a ferramenta passa a monitorar o estado dos arquivos no projeto.</p>
+            </div>
+        </li>
 
-    <h4>Commit</h4>
-    <p>É utilizado para criar uma nova versão do projeto a partir de um pacote de alterações. O <mark>commit</mark> pega
-        o pacote de
-        modificações adicionado através do comando <i> git add</i>, fecha essas alterações em um pacote e o identifica
-        através de um Hashcode
-    </p>
-    <h4>Push</h4>
-    <p>O comando <mark>push</mark> permite que você envie os commits de sua branch
-        repositório Git local para o seu repositório remoto. Para poder fazer um git push para seu repositório remoto,
-        você deve garantir que todas as suas alterações no repositório local sejam confirmadas.
-    </p>
-    <h4>Pull</h4>
-    <p>
-        O comando <mark>pull</mark> é usado para buscar e baixar conteúdo de repositórios remotos e fazer a atualização
-        imediata
-        ao repositório local para que os conteúdos sejam iguais.
-    </p>
-    <h4>Revert</h4>
-    <p>O comando <mark>revert</mark> é usado para desfazer alterações ao histórico de commits do repositório, no
-        entanto,
-        em vez de remover o commit do histórico do projeto, ele descobre como inverter as alterações introduzidas pelo
-        commit e anexa um commit novo com o conteúdo resultante.
-    </p>
-    <h4>Merge</h4>
-    <p><mark>Merge</mark>, que significa mesclagem, é o jeito do Git de unificar um histórico bifurcado. O comando git
-        merge permite
-        que você pegue as
-        linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.
-    </p>
-    <h4>Stash</h4>
-    <p> <mark>stash</mark> arquiva de alterações que você fez na cópia de trabalho durante um determinado período,
-        para que você possa trabalhar em outra coisa, depois voltar e fazer a reaplicação mais tarde.
-    </p>
-    <h4>Rm</h4>
-    <p>comando <mark>rm</mark> é usado para remover arquivos individuais ou uma coleção de arquvios de um repositório do
-        Git. Ele pode ser considerado como o inverso do comando git add.
-    </p>
-    <h4>Config</h4>
-    <p>O comando <mark>config</mark> é utilizado no sistema de controle de versão Git para configurar opções específicas
-        do usuário, repositório ou sistema. Esta opção é usada para definir a configuração em nível global, ou seja, as
-        configurações serão aplicadas a todos os repositórios do usuário no sistema.
-    </p>
-    <h4>Reset</h4>
-    <p>O comando <mark>reset</mark> é uma ferramenta complexa e versátil para desfazer alterações. Ele tem três formas
-        principais de invocação. Estas formas correspondem aos argumentos <i>--soft, --mixed, --hard</i> da linha de comandos.
-    </p>
-    <h4>Remote</h4>
-    <p>O comando <mark>remote</mark> é, em essência, uma interface para gerenciar uma lista de entradas remotas que são
-        armazenadas no arquivo <i>./. git/config do repositório.</i>
-    </p>
-    <h4>Fetch</h4>
-    <p>O comando <mark>fetch</mark> no Git é usado para buscar as alterações mais recentes de um repositório remoto para
-        o repositório local. Ele não faz nenhuma alteração no branch atual do repositório local, mas atualiza as
-        referências remotas, como as branches remotas e as tags.
-    </p>
-    <h4>Show</h4>
-    <p>O <mark>show</mark> é um utilitário de linha de comando usado para exibir informações expandidas de objetos Git,
-        como blobs, trees, marcações e commits. O <i>git-show</i> tem um comportamento específico por tipo do objeto.
-    </p>
-    <h4>Help</h4>
-    <p>O <mark>help</mark> é um comando do terminal que traz diversas informações sobre os comandos do git. Ele mostra,
-        desde os comandos em si, quanto também para que serve cada um. Se você digitar git help e o comando que quer ver descrito
-        ele lista para que serve aquele comando.
-    </p>
-    <h4>Rebase</h4>
-    <p> A partir da perspectiva de conteúdo, o <mark>rebase</mark>é o processo de alterar a base da ramificação do
-        commit para outra, fazendo parecer como se você criou a ramificação a partir de um commit diferente. De um jeito intrínseco,
-        o Git realiza isso criando novos commits e aplicando-os à base especificada.
-    </p>
-    <h4>Blame</h4>
-    <p>A função <mark>blame</mark> de alto nível é a exibição de metadados do autor anexados a linhas confirmadas
-        específicas em um arquivo. É usado para explorar o histórico de código específico e responder dúvidas sobre o que, como e por
-        que o código foi adicionado ao repositório.
-    </p>
-    <h4>Tag</h4>
-    <p>git <mark>tag</mark> é em geral usado para capturar um ponto no histórico que é usado para uma versão marcada.Um
-        marcador é como uma ramificação que não muda. Diferente das ramificações, os marcadores depois de criados não têm mais
-        histórico de commits
-    </p>
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">clone</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>O comando <mark>clone</mark> cria uma cópia de um repositório remoto em um diretório da máquina. A
+                    partir de um repositório clonado, é possível acompanhar o desenvolvimento de um projeto e suas
+                    modificações.</p>
+            </div>
+        </li>
 
-    <h3> Para te ajudar a fixar, aqui está uma tabela com os comandos e suas definições, de forma resumida</h3>
-    <table border="2">
-        <tr>
-            <th>Comando</th>
-            <th>Descrição</th>
-        </tr>
-        <tr>
-            <td>git init</td>
-            <td>Inicializa um novo repositório Git.</td>
-        </tr>
-        <tr>
-            <td>git clone</td>
-            <td>Clona um repositório existente.</td>
-        </tr>
-        <tr>
-            <td>git branch</td>
-            <td>Lista, cria ou deleta branches.</td>
-        </tr>
-        <tr>
-            <td>git checkout</td>
-            <td>Muda para outro branch ou revisa arquivos.</td>
-        </tr>
-        <tr>
-            <td>git status</td>
-            <td>Verifica o status das alterações no repositório.</td>
-        </tr>
-        <tr>
-            <td>git diff</td>
-            <td>Mostra as diferenças entre commits, branches, etc.</td>
-        </tr>
-        <tr>
-            <td>git add</td>
-            <td>Adiciona arquivos ao índice (staging area).</td>
-        </tr>
-        <tr>
-            <td>git commit</td>
-            <td>Salva as mudanças no repositório local.</td>
-        </tr>
-        <tr>
-            <td>git push</td>
-            <td>Envia as mudanças para um repositório remoto.</td>
-        </tr>
-        <tr>
-            <td>git pull</td>
-            <td>Atualiza o repositório local com mudanças do repositório remoto.</td>
-        </tr>
-        <tr>
-            <td>git revert</td>
-            <td>Reverte um commit específico.</td>
-        </tr>
-        <tr>
-            <td>git merge</td>
-            <td>Mescla branches.</td>
-        </tr>
-        <tr>
-            <td>git stash</td>
-            <td>Salva alterações temporariamente sem commitar.</td>
-        </tr>
-        <tr>
-            <td>git rm</td>
-            <td>Remove arquivos do índice e do diretório de trabalho.</td>
-        </tr>
-        <tr>
-            <td>git config</td>
-            <td>Configurações do Git (usuário, email, etc.).</td>
-        </tr>
-        <tr>
-            <td>git reset</td>
-            <td>Reseta o índice e a árvore de trabalho para um estado anterior.</td>
-        </tr>
-        <tr>
-            <td>git remote</td>
-            <td>Gerencia repositórios remotos.</td>
-        </tr>
-        <tr>
-            <td>git fetch</td>
-            <td>Baixa objetos e referências de um repositório remoto.</td>
-        </tr>
-        <tr>
-            <td>git show</td>
-            <td>Mostra várias informações sobre objetos Git.</td>
-        </tr>
-        <tr>
-            <td>git help</td>
-            <td>Mostra ajuda sobre comandos Git.</td>
-        </tr>
-        <tr>
-            <td>git rebase</td>
-            <td>Reaplica commits em cima de outro branch.</td>
-        </tr>
-        <tr>
-            <td>git blame</td>
-            <td>Mostra quem alterou cada linha de um arquivo.</td>
-        </tr>
-        <tr>
-            <td>git tag</td>
-            <td>Cria, lista, deleta ou verifica uma tag.</td>
-        </tr>
-    </table>
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Branch</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p><mark>branch</mark> serve para criar novos ramos de desenvolvimento, bem como visualizar
+                    quais são os ramos existentes.Para criar um novo ramo, basta utilizar o comando
+                    git branch seguido do nome do novo ramo, e para visualizar quais os ramos existentes
+                    a utilização do comando é bem similar: basta não informar um nome para a nova branch,
+                    e serão listadas todas as já criadas
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Checkout</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>O comando <mark>checkout</mark> é utilizado para navegar entre as versões do projeto, bem como entre
+                    as
+                    diferentes ramificações
+                    criadas. Para navegar entre as versões, basta usar o comando: <i>git checkout = Hashcode do
+                        commit</i>.
+                    E todo o estado do projeto se modificará ao estado no qual o commit foi feito
+                </p>
+            </div>
+        </li>
 
-    <h2> GitHub</h2>
-    <p> GitHub é uma plataforma de hospedagem de repositórios de código-fonte e arquivos, com controle de versão
-        que tem o sistema Git como base. Ele permite que os desenvolvedores ccontribuam em projetos compartilhados,
-        privados ou de código-aberto de qualquer lugar do mundo, e ainda mantenham um registro de seu progresso.
-        Mostraremos a seguir os passos para configurar e acessar o GitHub:
-        <ol>
-            <li>Instalar e configurar o Git, como já ensinamos acima</li>
-            <li>Acessar o <a href= github.com></a> e criar uma conta</li>
-            <li>Fazer login na sua conta GitHub</li>
-            <li>Criar um novo repositório a partir do ícone "+" no canto direito, e dar um nome a ele</li>
-            <li>Clonar seu repositório, copiando a URL na página de repositório e colando no terminal em frente ao comando "git clone"</li>
-            <li>E então, navegar no seu novo repositório e explorar todas os comandos git que foram definidos acima</li>
-        </ol>
-    </p>
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Status</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>É utilizado para verificar o <mark>status</mark> de um repositório git, bem como o estado do
+                    repositório
+                    central.
+                    O comando
+                    mostra informações como se o projeto local está sincronizado com o central, quais arquivos estão
+                    sendo
+                    monitorados pelo Git e em qual branch você está no projeto.
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Diff</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>Diff</mark> é utilizado para visualizar modificações feitas entre commits, sejam eles entre um
+                    commit
+                    arbitrário e o estado
+                    atual do projeto, dois commits arbitrários, ou até mesmo todas alterações entre dois commits
+                    distintos.
+                    Para visualizar as alterações entre um commit distinto e o atual, basta usar o comando: <i> git diff
+                        =
+                        Hashcode do
+                        commit anterior</i>
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Add</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>É comando <mark>add</mark> utilizado para adicionar arquivos ao pacote de alterações a serem feitas.
+                    É
+                    possível
+                    adicionar um único
+                    arquivo, múltiplos arquivos de uma vez, ou até mesmo um diretório, a partir de seu caminho. Uma vez
+                    que um
+                    arquivo é adicionado ao pacote de alterações com o comando add, ele está pronto para entrar no
+                    próximo
+                    commit.
+                </p>
+            </div>
+        </li>
 
-    <h5>
-        Também disponibilizamos um vídeo e um áudio explicando mais sobre o sistema Git e a plataforma GitHub para
-        te ajudar a entender melhor suas aplicações. Para acessar, basta clicar nos links qua estão no topo desta página:
-    </h5>
-    <a href="#topo"> Voltar ao topo</a>
-    
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Commit</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>É utilizado para criar uma nova versão do projeto a partir de um pacote de alterações. O
+                    <mark>commit</mark>
+                    pega
+                    o pacote de
+                    modificações adicionado através do comando <i> git add</i>, fecha essas alterações em um pacote e o
+                    identifica
+                    através de um Hashcode
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Push</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p>O comando <mark>push</mark> permite que você envie os commits de sua branch
+                    repositório Git local para o seu repositório remoto. Para poder fazer um git push para seu
+                    repositório
+                    remoto,
+                    você deve garantir que todas as suas alterações no repositório local sejam confirmadas.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Pull</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>pull</mark> é usado para buscar e baixar conteúdo de repositórios remotos e fazer a
+                    atualização imediata ao repositório local para que os conteúdos sejam iguais.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Revert</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>revert</mark> é usado para desfazer alterações ao histórico de commits do
+                    repositório, no entanto, em vez de remover o commit do histórico do projeto, ele descobre como inverter as alterações introduzidas pelo commit e anexa um commit novo com o conteúdo resultante.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Merge</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> <mark>Merge</mark>, que significa mesclagem, é o jeito do Git de unificar um histórico bifurcado. O
+                    comando git merge permite que você pegue as linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Stash</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> <mark>stash</mark> arquiva de alterações que você fez na cópia de trabalho durante um determinado
+                    período,
+                    para que você possa trabalhar em outra coisa, depois voltar e fazer a reaplicação mais tarde.
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Rm</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>rm</mark> é usado para remover arquivos individuais ou uma coleção de arquvios de um
+                    repositório do
+                    Git. Ele pode ser considerado como o inverso do comando git add.
+                </p>
+            </div>
+        </li>
+        
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Config</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>config</mark> é utilizado no sistema de controle de versão Git para configurar opções
+                    específicas
+                    do usuário, repositório ou sistema. Esta opção é usada para definir a configuração em nível global,
+                    ou seja,
+                    as
+                    configurações serão aplicadas a todos os repositórios do usuário no sistema.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Reset</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>reset</mark> é uma ferramenta complexa e versátil para desfazer alterações. Ele tem
+                    três
+                    formas
+                    principais de invocação. Estas formas correspondem aos argumentos <i>--soft, --mixed, --hard</i> da
+                    linha de
+                    comandos.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Remote</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>remote</mark> é, em essência, uma interface para gerenciar uma lista de entradas
+                    remotas que
+                    são
+                    armazenadas no arquivo <i>./. git/config do repositório.</i>
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Fetch</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O comando <mark>fetch</mark> no Git é usado para buscar as alterações mais recentes de um repositório
+                    remoto
+                    para
+                    o repositório local. Ele não faz nenhuma alteração no branch atual do repositório local, mas
+                    atualiza as
+                    referências remotas, como as branches remotas e as tags.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Show</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O <mark>show</mark> é um utilitário de linha de comando usado para exibir informações expandidas de
+                    objetos
+                    Git,
+                    como blobs, trees, marcações e commits. O <i>git-show</i> tem um comportamento específico por tipo
+                    do
+                    objeto.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Help</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> O <mark>help</mark> é um comando do terminal que traz diversas informações sobre os comandos do git.
+                    Ele
+                    mostra,
+                    desde os comandos em si, quanto também para que serve cada um. Se você digitar git help e o comando
+                    que quer
+                    ver descrito
+                    ele lista para que serve aquele comando.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Rebase</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> A partir da perspectiva de conteúdo, o <mark>rebase</mark>é o processo de alterar a base da
+                    ramificação do
+                    commit para outra, fazendo parecer como se você criou a ramificação a partir de um commit diferente.
+                    De um
+                    jeito intrínseco,
+                    o Git realiza isso criando novos commits e aplicando-os à base especificada.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Blame</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> A função <mark>blame</mark> de alto nível é a exibição de metadados do autor anexados a linhas
+                    confirmadas
+                    específicas em um arquivo. É usado para explorar o histórico de código específico e responder
+                    dúvidas sobre
+                    o que, como e por
+                    que o código foi adicionado ao repositório.
+                </p>
+            </div>
+        </li>
+
+        <li class="menu">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <span class="command-title">Tag</span>
+                <span class="arrow">&#9660;</span>
+            </div>
+            <div class="menu-content">
+                <p> Git <mark>tag</mark> é em geral usado para capturar um ponto no histórico que é usado para uma versão
+                    marcada.Um
+                    marcador é como uma ramificação que não muda. Diferente das ramificações, os marcadores depois de
+                    criados
+                    não têm mais
+                    histórico de commits
+
+                </p>
+            </div>
+        </li>
+            </div>
+
+            <h3> Para te ajudar a fixar, aqui está uma tabela com os comandos e suas definições, de forma resumida</h3>
+            <table border="2">
+                <tr>
+                    <th>Comando</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td>git init</td>
+                    <td>Inicializa um novo repositório Git.</td>
+                </tr>
+                <tr>
+                    <td>git clone</td>
+                    <td>Clona um repositório existente.</td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td>Lista, cria ou deleta branches.</td>
+                </tr>
+                <tr>
+                    <td>git checkout</td>
+                    <td>Muda para outro branch ou revisa arquivos.</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>Verifica o status das alterações no repositório.</td>
+                </tr>
+                <tr>
+                    <td>git diff</td>
+                    <td>Mostra as diferenças entre commits, branches, etc.</td>
+                </tr>
+                <tr>
+                    <td>git add</td>
+                    <td>Adiciona arquivos ao índice (staging area).</td>
+                </tr>
+                <tr>
+                    <td>git commit</td>
+                    <td>Salva as mudanças no repositório local.</td>
+                </tr>
+                <tr>
+                    <td>git push</td>
+                    <td>Envia as mudanças para um repositório remoto.</td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td>Atualiza o repositório local com mudanças do repositório remoto.</td>
+                </tr>
+                <tr>
+                    <td>git revert</td>
+                    <td>Reverte um commit específico.</td>
+                </tr>
+                <tr>
+                    <td>git merge</td>
+                    <td>Mescla branches.</td>
+                </tr>
+                <tr>
+                    <td>git stash</td>
+                    <td>Salva alterações temporariamente sem commitar.</td>
+                </tr>
+                <tr>
+                    <td>git rm</td>
+                    <td>Remove arquivos do índice e do diretório de trabalho.</td>
+                </tr>
+                <tr>
+                    <td>git config</td>
+                    <td>Configurações do Git (usuário, email, etc.).</td>
+                </tr>
+                <tr>
+                    <td>git reset</td>
+                    <td>Reseta o índice e a árvore de trabalho para um estado anterior.</td>
+                </tr>
+                <tr>
+                    <td>git remote</td>
+                    <td>Gerencia repositórios remotos.</td>
+                </tr>
+                <tr>
+                    <td>git fetch</td>
+                    <td>Baixa objetos e referências de um repositório remoto.</td>
+                </tr>
+                <tr>
+                    <td>git show</td>
+                    <td>Mostra várias informações sobre objetos Git.</td>
+                </tr>
+                <tr>
+                    <td>git help</td>
+                    <td>Mostra ajuda sobre comandos Git.</td>
+                </tr>
+                <tr>
+                    <td>git rebase</td>
+                    <td>Reaplica commits em cima de outro branch.</td>
+                </tr>
+                <tr>
+                    <td>git blame</td>
+                    <td>Mostra quem alterou cada linha de um arquivo.</td>
+                </tr>
+                <tr>
+                    <td>git tag</td>
+                    <td>Cria, lista, deleta ou verifica uma tag.</td>
+                </tr>
+            </table>
+
+            <h2> GitHub</h2>
+            <p> GitHub é uma plataforma de hospedagem de repositórios de código-fonte e arquivos, com controle de versão
+                que tem o sistema Git como base. Ele permite que os desenvolvedores ccontribuam em projetos
+                compartilhados,
+                privados ou de código-aberto de qualquer lugar do mundo, e ainda mantenham um registro de seu progresso.
+                Mostraremos a seguir os passos para configurar e acessar o GitHub:
+            <ol>
+                <li>Instalar e configurar o Git, como já ensinamos acima</li>
+                <li>Acessar o <a href=github.com></a> e criar uma conta</li>
+                <li>Fazer login na sua conta GitHub</li>
+                <li>Criar um novo repositório a partir do ícone "+" no canto direito, e dar um nome a ele</li>
+                <li>Clonar seu repositório, copiando a URL na página de repositório e colando no terminal em frente ao
+                    comando
+                    "git clone"</li>
+                <li>E então, navegar no seu novo repositório e explorar todas os comandos git que foram definidos acima
+                </li>
+            </ol>
+            </p>
+
+            <h5>
+                Também disponibilizamos um vídeo e um áudio explicando mais sobre o sistema Git e a plataforma GitHub
+                para
+                te ajudar a entender melhor suas aplicações. Para acessar, basta clicar nos links qua estão no topo
+                desta
+                página:
+            </h5>
+            <a href="#topo"> Voltar ao topo</a>
+
 </body>
 
 </html>
