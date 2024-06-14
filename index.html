@@ -9,11 +9,14 @@
 
 <body>
     <h1> Introdução a Git e GitHub - Nível básico </h1>
-    <p>É de extrema importância que um desenvolvedor esteja atento a todas os mecanimos que são utilizados dentro de sua 
-        área de atuação. Ter conhecimento sobre alguns sistemas e plataformas populares é de extrema importância para que
-        o programador esteja atualizado neste ramo, o que proporciona maior aproveitamento do seu trabalho e ainda permite
+    <p>É de extrema importância que um desenvolvedor esteja atento a todas os mecanimos que são utilizados dentro de sua
+        área de atuação. Ter conhecimento sobre alguns sistemas e plataformas populares é de extrema importância para
+        que
+        o programador esteja atualizado neste ramo, o que proporciona maior aproveitamento do seu trabalho e ainda
+        permite
         que consiga se adaptar bem a qualquer empresa que exija tais conhecimentos. Pensando nisso, criamos um tutorial
-        básico sobre o VCS Git, e a popular plataforma GitHub, a fim de ajudar desenvolvedores iniciantes a se introduzir nesse meio.
+        básico sobre o VCS Git, e a popular plataforma GitHub, a fim de ajudar desenvolvedores iniciantes a se
+        introduzir nesse meio.
     </p>
 
     <img src="imagens/git.jpg" alt="Imagem do Git e GitHub">
@@ -70,23 +73,27 @@
         quais são os ramos existentes.Para criar um novo ramo, basta utilizar o comando
         git branch seguido do nome do novo ramo, e para visualizar quais os ramos existentes
         a utilização do comando é bem similar: basta não informar um nome para a nova branch,
-        e serão listadas todas as já criadas</p>
+        e serão listadas todas as já criadas
+    </p>
     <h4>Checkout</h4>
     <p>O comando <mark>checkout</mark> é utilizado para navegar entre as versões do projeto, bem como entre as
         diferentes ramificações
         criadas. Para navegar entre as versões, basta usar o comando: <i>git checkout = Hashcode do commit</i>.
-        E todo o estado do projeto se modificará ao estado no qual o commit foi feito</p>
+        E todo o estado do projeto se modificará ao estado no qual o commit foi feito
+    </p>
     <h4>Status</h4>
     <p>É utilizado para verificar o <mark>status</mark> de um repositório git, bem como o estado do repositório central.
         O comando
         mostra informações como se o projeto local está sincronizado com o central, quais arquivos estão sendo
-        monitorados pelo Git e em qual branch você está no projeto.</p>
+        monitorados pelo Git e em qual branch você está no projeto.
+    </p>
     <h4>Diff</h4>
-    <mark>Diff</mark> é utilizado para visualizar modificações feitas entre commits, sejam eles entre um commit
+    <p><mark>Diff</mark> é utilizado para visualizar modificações feitas entre commits, sejam eles entre um commit
     arbitrário e o estado
     atual do projeto, dois commits arbitrários, ou até mesmo todas alterações entre dois commits distintos.
     Para visualizar as alterações entre um commit distinto e o atual, basta usar o comando: <i> git diff = Hashcode do
-        commit anterior</i>
+    commit anterior</i>
+    </p>
 
     <h4>Add</h4>
     <p>É comando <mark>add</mark> utilizado para adicionar arquivos ao pacote de alterações a serem feitas. É possível
@@ -100,77 +107,79 @@
         o pacote de
         modificações adicionado através do comando <i> git add</i>, fecha essas alterações em um pacote e o identifica
         através de um Hashcode
+    </p>
     <h4>Push</h4>
     <p>O comando <mark>push</mark> permite que você envie os commits de sua branch
         repositório Git local para o seu repositório remoto. Para poder fazer um git push para seu repositório remoto,
-        você deve garantir que todas as suas alterações no repositório local sejam confirmadas.</p>
-
+        você deve garantir que todas as suas alterações no repositório local sejam confirmadas.
+    </p>
     <h4>Pull</h4>
     <p>
         O comando <mark>pull</mark> é usado para buscar e baixar conteúdo de repositórios remotos e fazer a atualização
         imediata
-        ao repositório local para que os conteúdos sejam iguais.</p>
-
+        ao repositório local para que os conteúdos sejam iguais.
+    </p>
     <h4>Revert</h4>
     <p>O comando <mark>revert</mark> é usado para desfazer alterações ao histórico de commits do repositório, no
         entanto,
         em vez de remover o commit do histórico do projeto, ele descobre como inverter as alterações introduzidas pelo
-        commit e anexa um commit novo com o conteúdo resultante. .</p>
+        commit e anexa um commit novo com o conteúdo resultante.
+    </p>
     <h4>Merge</h4>
     <p><mark>Merge</mark>, que significa mesclagem, é o jeito do Git de unificar um histórico bifurcado. O comando git
         merge permite
         que você pegue as
-        linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.</p>
-
+        linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.
+    </p>
     <h4>Stash</h4>
     <p> <mark>stash</mark> arquiva de alterações que você fez na cópia de trabalho durante um determinado período,
-        para que você possa trabalhar em outra coisa, depois voltar e fazer a reaplicação mais tarde.</p>
+        para que você possa trabalhar em outra coisa, depois voltar e fazer a reaplicação mais tarde.
+    </p>
     <h4>Rm</h4>
     <p>comando <mark>rm</mark> é usado para remover arquivos individuais ou uma coleção de arquvios de um repositório do
-        Git. Ele
-        pode ser considerado como o inverso do
-        comando git add.</p>
+        Git. Ele pode ser considerado como o inverso do comando git add.
+    </p>
     <h4>Config</h4>
     <p>O comando <mark>config</mark> é utilizado no sistema de controle de versão Git para configurar opções específicas
-        do
-        usuário, repositório ou sistema. Esta opção é usada para definir a configuração em nível global, ou seja, as
-        configurações serão aplicadas a todos os repositórios do usuário no sistema.</p>
+        do usuário, repositório ou sistema. Esta opção é usada para definir a configuração em nível global, ou seja, as
+        configurações serão aplicadas a todos os repositórios do usuário no sistema.
+    </p>
     <h4>Reset</h4>
     <p>O comando <mark>reset</mark> é uma ferramenta complexa e versátil para desfazer alterações. Ele tem três formas
-        principais
-        de invocação. Estas formas correspondem aos argumentos <i>--soft, --mixed, --hard</i> da linha de comandos.</p>
+        principais de invocação. Estas formas correspondem aos argumentos <i>--soft, --mixed, --hard</i> da linha de comandos.
+    </p>
     <h4>Remote</h4>
     <p>O comando <mark>remote</mark> é, em essência, uma interface para gerenciar uma lista de entradas remotas que são
-        armazenadas no arquivo ./. git/config do repositório.</p>
+        armazenadas no arquivo <i>./. git/config do repositório.</i>
+    </p>
     <h4>Fetch</h4>
     <p>O comando <mark>fetch</mark> no Git é usado para buscar as alterações mais recentes de um repositório remoto para
-        o
-        repositório local. Ele não faz nenhuma alteração no branch atual do repositório local, mas atualiza as
-        referências remotas, como as branches remotas e as tags.</p>
+        o repositório local. Ele não faz nenhuma alteração no branch atual do repositório local, mas atualiza as
+        referências remotas, como as branches remotas e as tags.
+    </p>
     <h4>Show</h4>
     <p>O <mark>show</mark> é um utilitário de linha de comando usado para exibir informações expandidas de objetos Git,
-        como
-        blobs, trees, marcações e commits. O <i>git-show</i> tem um comportamento específico por tipo do objeto.</p>
+        como blobs, trees, marcações e commits. O <i>git-show</i> tem um comportamento específico por tipo do objeto.
+    </p>
     <h4>Help</h4>
     <p>O <mark>help</mark> é um comando do terminal que traz diversas informações sobre os comandos do git. Ele mostra,
-        desde os
-        comandos em si, quanto também para que serve cada um. Se você digitar git help e o comando que quer ver descrito
-        ele lista para que serve aquele comando.</p>
+        desde os comandos em si, quanto também para que serve cada um. Se você digitar git help e o comando que quer ver descrito
+        ele lista para que serve aquele comando.
+    </p>
     <h4>Rebase</h4>
     <p> A partir da perspectiva de conteúdo, o <mark>rebase</mark>é o processo de alterar a base da ramificação do
-        commit para
-        outra, fazendo parecer como se você criou a ramificação a partir de um commit diferente. De um jeito intrínseco,
-        o Git realiza isso criando novos commits e aplicando-os à base especificada.</p>
+        commit para outra, fazendo parecer como se você criou a ramificação a partir de um commit diferente. De um jeito intrínseco,
+        o Git realiza isso criando novos commits e aplicando-os à base especificada.
+    </p>
     <h4>Blame</h4>
     <p>A função <mark>blame</mark> de alto nível é a exibição de metadados do autor anexados a linhas confirmadas
-        específicas em
-        um arquivo. É usado para explorar o histórico de código específico e responder dúvidas sobre o que, como e por
-        que o código foi adicionado ao repositório.</p>
+        específicas em um arquivo. É usado para explorar o histórico de código específico e responder dúvidas sobre o que, como e por
+        que o código foi adicionado ao repositório.
+    </p>
     <h4>Tag</h4>
     <p>git <mark>tag</mark> é em geral usado para capturar um ponto no histórico que é usado para uma versão marcada.Um
-        marcador é
-        como uma ramificação que não muda. Diferente das ramificações, os marcadores depois de criados não têm mais
-        histórico de commits</p>
+        marcador é como uma ramificação que não muda. Diferente das ramificações, os marcadores depois de criados não têm mais
+        histórico de commits
     </p>
 
     <h3> Para te ajudar a fixar, aqui está uma tabela com os comandos e suas definições, de forma resumida</h3>
@@ -268,17 +277,9 @@
             <td>Mostra quem alterou cada linha de um arquivo.</td>
         </tr>
         <tr>
-            <td><b>git tag</td>
+            <td>git tag</td>
             <td>Cria, lista, deleta ou verifica uma tag.</td>
         </tr>
-
-    <h2>GitHub</h2>
-    <p><b>GitHub</b> é uma plataforma de hospedagem de repositórios e arquivos de controle de versão
-        que utiliza o sistema Git como base.
-        Ele fornece diversas ferramentas aos desenvolvedores cadastrados, permitindo que
-        contribuam em projetos privados ou de código-aberto de qualquer lugar do mundo.
-    </p>
-
 
 
 </body>
