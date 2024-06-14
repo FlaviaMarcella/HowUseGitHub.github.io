@@ -50,98 +50,120 @@
     <p></p>
     </p>
     <h4>Init</h4>
-    <p>Init é utilizado para iniciar um repositório Git dentro so sistema.
+    <p><mark>init</mark> é utilizado para iniciar um repositório Git dentro so sistema.
         Após a incialização, a ferramenta passa a monitorar o estado dos arquivvos no projeto.
     </p>
-    <h4>clone</h4>
-    <p>É utilizado para criar uma cópia de um repositório remoto em um diretório
+    <h4>Clone</h4>
+    <p>O comando <mark>clone</mark> cria uma cópia de um repositório remoto em um diretório
         da máquina.A partir de um repositório clonado, é possível acompanhar o
         de um projeto e suas modificações, além de contribuir com o projeto, a
         partir do envio das suas modificações ao repositório central.
     </p>
-    <h4>branch</h4>
-    <p>É utilizado para criar novos ramos de desenvolvimento, bem como visualizar
+    <h4>Branch</h4>
+    <p> <mark>branch</mark> serve para criar novos ramos de desenvolvimento, bem como visualizar
         quais são os ramos existentes.Para criar um novo ramo, basta utilizar o comando
         git branch seguido do nome do novo ramo, e para visualizar quais os ramos existentes
         a utilização do comando é bem similar: basta não informar um nome para a nova branch,
         e serão listadas todas as já criadas</p>
-    <h4>checkout</h4>
-    <p>É utilizado para navegar entre as versões do projeto, bem como entre as diferentes ramificações
+    <h4>Checkout</h4>
+    <p>O comando <mark>checkout</mark> é utilizado para navegar entre as versões do projeto, bem como entre as
+        diferentes ramificações
         criadas. Para navegar entre as versões, basta usar o comando: <i>git checkout = Hashcode do commit</i>.
         E todo o estado do projeto se modificará ao estado no qual o commit foi feito</p>
-    <h4>status</h4>
-    <p>É utilizado para verificar o status de um repositório git, bem como o estado do repositório central. O comando
+    <h4>Status</h4>
+    <p>É utilizado para verificar o <mark>status</mark> de um repositório git, bem como o estado do repositório central.
+        O comando
         mostra informações como se o projeto local está sincronizado com o central, quais arquivos estão sendo
         monitorados pelo Git e em qual branch você está no projeto.</p>
-    <h4>diff</h4>
-    É utilizado para visualizar modificações feitas entre commits, sejam eles entre um commit arbitrário e o estado
+    <h4>Diff</h4>
+    <mark>Diff</mark> é utilizado para visualizar modificações feitas entre commits, sejam eles entre um commit
+    arbitrário e o estado
     atual do projeto, dois commits arbitrários, ou até mesmo todas alterações entre dois commits distintos.
     Para visualizar as alterações entre um commit distinto e o atual, basta usar o comando: <i> git diff = Hashcode do
         commit anterior</i>
 
-    <h4>add</h4>
-    <p>É utilizado para adicionar arquivos ao pacote de alterações a serem feitas. É possível adicionar um único
+    <h4>Add</h4>
+    <p>É comando <mark>add</mark> utilizado para adicionar arquivos ao pacote de alterações a serem feitas. É possível
+        adicionar um único
         arquivo, múltiplos arquivos de uma vez, ou até mesmo um diretório, a partir de seu caminho. Uma vez que um
         arquivo é adicionado ao pacote de alterações com o comando add, ele está pronto para entrar no próximo commit.
     </p>
 
-    <h4>commit</h4>
-    <p>É utilizado para criar uma nova versão do projeto a partir de um pacote de alterações. O commit pega o pacote de
+    <h4>Commit</h4>
+    <p>É utilizado para criar uma nova versão do projeto a partir de um pacote de alterações. O <mark>commit</mark> pega
+        o pacote de
         modificações adicionado através do comando <i> git add</i>, fecha essas alterações em um pacote e o identifica
         através de um Hashcode
-    <h4>push</h4>
-    <p>O comando push permite que você envie os commits de sua branch
+    <h4>Push</h4>
+    <p>O comando <mark>push</mark> permite que você envie os commits de sua branch
         repositório Git local para o seu repositório remoto. Para poder fazer um git push para seu repositório remoto,
         você deve garantir que todas as suas alterações no repositório local sejam confirmadas.</p>
 
-    <h4>pull</h4>
+    <h4>Pull</h4>
     <p>
-        O comando pull é usado para buscar e baixar conteúdo de repositórios remotos e fazer a atualização imediata
+        O comando <mark>pull</mark> é usado para buscar e baixar conteúdo de repositórios remotos e fazer a atualização
+        imediata
         ao repositório local para que os conteúdos sejam iguais.</p>
 
-    <h4>revert</h4>
-    <p>O comando revert é usado para desfazer alterações ao histórico de commits do repositório, no entanto,
+    <h4>Revert</h4>
+    <p>O comando <mark>revert</mark> é usado para desfazer alterações ao histórico de commits do repositório, no
+        entanto,
         em vez de remover o commit do histórico do projeto, ele descobre como inverter as alterações introduzidas pelo
         commit e anexa um commit novo com o conteúdo resultante. .</p>
-    <h4>merge</h4>
-    <p>Merge, que signiifica mesclagem, é o jeito do Git de unificar um histórico bifurcado. O comando git merge permite
+    <h4>Merge</h4>
+    <p><mark>Merge</mark>, que significa mesclagem, é o jeito do Git de unificar um histórico bifurcado. O comando git
+        merge permite
         que você pegue as
         linhas de desenvolvimento independentes criadas pelo git branch e as integre em uma ramificação única.</p>
 
-    <h4>stash</h4>
-    <p> stash arquiva de alterações que você fez na cópia de trabalho durante um determinado período,
+    <h4>Stash</h4>
+    <p> <mark>stash</mark> arquiva de alterações que você fez na cópia de trabalho durante um determinado período,
         para que você possa trabalhar em outra coisa, depois voltar e fazer a reaplicação mais tarde.</p>
-    <h4>rm</h4>
-    <p>comando rm é usado para remover arquivos individuais ou uma coleção de arquvios de um repositório do Git. Ele
+    <h4>Rm</h4>
+    <p>comando <mark>rm</mark> é usado para remover arquivos individuais ou uma coleção de arquvios de um repositório do
+        Git. Ele
         pode ser considerado como o inverso do
         comando git add.</p>
-    <h4>config</h4>
-    <p>O comando config é utilizado no sistema de controle de versão Git para configurar opções específicas do
+    <h4>Config</h4>
+    <p>O comando <mark>config</mark> é utilizado no sistema de controle de versão Git para configurar opções específicas
+        do
         usuário, repositório ou sistema. Esta opção é usada para definir a configuração em nível global, ou seja, as
         configurações serão aplicadas a todos os repositórios do usuário no sistema.</p>
-    <h4>reset</h4>
-    <p>O comando git reset é uma ferramenta complexa e versátil para desfazer alterações. Ele tem três formas principais
-        de invocação. Estas formas correspondem aos argumentos <b>--soft, --mixed, --hard</b> da linha de comandos.</p>
-    <h4>remote</h4>
-    <p>O comando git remote é, em essência, uma interface para gerenciar uma lista de entradas remotas que são
+    <h4>Reset</h4>
+    <p>O comando <mark>reset</mark> é uma ferramenta complexa e versátil para desfazer alterações. Ele tem três formas
+        principais
+        de invocação. Estas formas correspondem aos argumentos <i>--soft, --mixed, --hard</i> da linha de comandos.</p>
+    <h4>Remote</h4>
+    <p>O comando <mark>remote</mark> é, em essência, uma interface para gerenciar uma lista de entradas remotas que são
         armazenadas no arquivo ./. git/config do repositório.</p>
-    <h4>fetch</h4>
-    <p>O comando fetch no Git é usado para buscar as alterações mais recentes de um repositório remoto para o
+    <h4>Fetch</h4>
+    <p>O comando <mark>fetch</mark> no Git é usado para buscar as alterações mais recentes de um repositório remoto para
+        o
         repositório local. Ele não faz nenhuma alteração no branch atual do repositório local, mas atualiza as
         referências remotas, como as branches remotas e as tags.</p>
-    <h4>show</h4>
-    <p>O <i>git-show</i> é um utilitário de linha de comando usado para exibir informações expandidas de objetos Git,
+    <h4>Show</h4>
+    <p>O <mark>show</mark> é um utilitário de linha de comando usado para exibir informações expandidas de objetos Git,
         como
         blobs, trees, marcações e commits. O <i>git-show</i> tem um comportamento específico por tipo do objeto.</p>
-    <h4>help</h4>
-    <p>O git help é um comando do terminal que traz diversas informações sobre os comandos do git. Ele mostra, desde os
+    <h4>Help</h4>
+    <p>O <mark>help</mark> é um comando do terminal que traz diversas informações sobre os comandos do git. Ele mostra,
+        desde os
         comandos em si, quanto também para que serve cada um. Se você digitar git help e o comando que quer ver descrito
         ele lista para que serve aquele comando.</p>
-    <h4>rebase</h4>
-
-    <h4>blame</h4>
-
-    <h4>tag</h4>
+    <h4>Rebase</h4>
+    <p> A partir da perspectiva de conteúdo, o <mark>rebase</mark>é o processo de alterar a base da ramificação do
+        commit para
+        outra, fazendo parecer como se você criou a ramificação a partir de um commit diferente. De um jeito intrínseco,
+        o Git realiza isso criando novos commits e aplicando-os à base especificada.</p>
+    <h4>Blame</h4>
+    <p>A função <mark>blame</mark> de alto nível é a exibição de metadados do autor anexados a linhas confirmadas
+        específicas em
+        um arquivo. É usado para explorar o histórico de código específico e responder dúvidas sobre o que, como e por
+        que o código foi adicionado ao repositório.</p>
+    <h4>Tag</h4>
+    <p>git <mark>tag</mark> é em geral usado para capturar um ponto no histórico que é usado para uma versão marcada.Um marcador é
+        como uma ramificação que não muda. Diferente das ramificações, os marcadores depois de criados não têm mais
+        histórico de commits</p>
     </p>
 
 
