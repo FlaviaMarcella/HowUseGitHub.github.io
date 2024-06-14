@@ -222,6 +222,11 @@ a[href="#topo"]:hover {
 
 audio {
     display: block;
-    margin: 0 auto; /* Centraliza o elemento <audio> horizontalmente */
-    margin-top: 20px; /* Espaço acima do elemento <audio> */
+    margin: 0 auto; 
+    margin-top: 20px; 
+}
+video {
+    display: block;
+    margin: 0 auto; 
+    margin-top: 20px; 
 }
